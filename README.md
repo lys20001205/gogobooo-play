@@ -4,9 +4,11 @@ This repository hosts only a packaged Godot browser export and the small deploym
 
 Play: https://lys20001205.github.io/gogobooo-play/godot/
 
-Source build revision: `bcff64fb4289608110810c364fef9d7c4d9a7b1d`  
+Source build revision: `a7563b65fe8d85f2fe401e163ba47caacc107425`  
 Godot: `4.7.2.stable.official.ed1daf0bf`  
 Renderer: WebGL 2, single-threaded
+
+The complete `godot/` export, including its loader and metadata, is copied byte-for-byte from the successful source CI artifact. Only the independent root redirect and repository transport packaging are added.
 
 ## Publishing
 
