@@ -1,0 +1,90 @@
+name: Publish playable export
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout export repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Verify and unpack exported game
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum --strict --check UPLOADS.sha256
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import gzip, hashlib, shutil, stat, zipfile
+          expected = {}
+          for line in Path('SITE.sha256').read_text().splitlines():
+              digest, name = line.split('  ', 1)
+              path = PurePosixPath(name)
+              assert len(digest) == 64 and all(c in '0123456789abcdef' for c in digest)
+              assert not path.is_absolute() and '..' not in path.parts and name == path.as_posix()
+              assert name not in expected
+              expected[name] = digest
+          binary_archives = {
+              'godot/index.wasm': 'godot-engine.wasm.gz',
+              'godot/index.pck': 'game-data.pck.gz',
+          }
+          assert set(binary_archives).issubset(expected)
+          target = Path('_site')
+          target.mkdir(exist_ok=False)
+          with zipfile.ZipFile('web-shell.zip') as archive:
+              entries = archive.infolist()
+              names = [entry.filename for entry in entries]
+              assert len(names) == len(set(names))
+              assert set(names) == set(expected) - set(binary_archives)
+              for entry in entries:
+                  assert not entry.is_dir() and not stat.S_ISLNK(entry.external_attr >> 16)
+                  destination = target / entry.filename
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  with archive.open(entry) as source, destination.open('wb') as output:
+                      shutil.copyfileobj(source, output)
+          for name, filename in binary_archives.items():
+              destination = target / name
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              with gzip.open(filename, 'rb') as source, destination.open('wb') as output:
+                  shutil.copyfileobj(source, output)
+          actual = {p.relative_to(target).as_posix() for p in target.rglob('*') if p.is_file()}
+          assert actual == set(expected)
+          for name, digest in expected.items():
+              path = target / name
+              assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, name
+              print(f'Verified {name}: {path.stat().st_size} bytes')
+          PY
+          (cd _site && sha256sum --strict --check ../SITE.sha256)
+      - name: Upload verified site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
