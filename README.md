@@ -4,7 +4,7 @@ This repository hosts only a packaged Godot browser export and the small deploym
 
 Play: https://lys20001205.github.io/gogobooo-play/godot/
 
-Source build revision: `a7563b65fe8d85f2fe401e163ba47caacc107425`  
+Source build revision: `bb4310b596f425defefb9283a1e601523c8c2d4d`  
 Godot: `4.7.2.stable.official.ed1daf0bf`  
 Renderer: WebGL 2, single-threaded
 
