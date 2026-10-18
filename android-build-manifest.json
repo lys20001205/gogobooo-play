@@ -1,0 +1,20 @@
+{
+  "artifact": "gogobooo-gi-test.apk",
+  "bytes": 31307542,
+  "sha256": "33542f911f71e66dcca47dadc59fb812ff4cd8b1cb19fe997c8eb8731e272d0a",
+  "package": "org.gogobooo.gibench",
+  "mode": "native CPU cold + full filter",
+  "godot": "4.6.3",
+  "godot_cpp_commit": "27d9dd23c83871e0619fca5dc2cddfbfd69e926a",
+  "quality": {
+    "faces": 29533,
+    "occluders": 40,
+    "receivers": 122661,
+    "graph_spp": 256,
+    "gather_spp": 128,
+    "spacing": 1,
+    "seed": 12345
+  },
+  "android_device_execution": "not yet verified",
+  "source_commit": "55ec24f646c4ef5f8626757a12578fb29d9d15c7"
+}

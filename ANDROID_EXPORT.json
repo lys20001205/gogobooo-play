@@ -1,0 +1,309 @@
+{
+  "schema": "gogobooo-isolated-android-export-v1",
+  "filename": "gogobooo-gi-test.apk",
+  "bytes": 31307542,
+  "sha256": "33542f911f71e66dcca47dadc59fb812ff4cd8b1cb19fe997c8eb8731e272d0a",
+  "chunks": [
+    {
+      "path": "android-upload/apk.part-0000",
+      "bytes": 524288,
+      "sha256": "c339c3c7d557c45533e6ad12e3eeb1f97eacd6f66f3e1d3a310ff7e3b54fd41e"
+    },
+    {
+      "path": "android-upload/apk.part-0001",
+      "bytes": 524288,
+      "sha256": "84dea680069f607b1d8ce8dc9a33fb2632b3a5e72bd51bcf991e21b97f70ad76"
+    },
+    {
+      "path": "android-upload/apk.part-0002",
+      "bytes": 524288,
+      "sha256": "44d104bbac523925de6a105ee99b4ebad28fca0e00930be5d907905cf5461114"
+    },
+    {
+      "path": "android-upload/apk.part-0003",
+      "bytes": 524288,
+      "sha256": "ba6b4d0f1a1c1644f32fc332496c10bab906cd5ac3a3039e49c45d2b4587ad55"
+    },
+    {
+      "path": "android-upload/apk.part-0004",
+      "bytes": 524288,
+      "sha256": "e9650de7249c850e0d4f0f96ba44c56a2115f7233b940af7489d20ace78c88a4"
+    },
+    {
+      "path": "android-upload/apk.part-0005",
+      "bytes": 524288,
+      "sha256": "badbae6ce5029d1511adfa7eaa2b304dfaf54bb0d018912ce1e99d0835140f85"
+    },
+    {
+      "path": "android-upload/apk.part-0006",
+      "bytes": 524288,
+      "sha256": "8b09539f5b5110e853ecf3f2340ff82f118bc2761f24b0030dca52744a5f0e9a"
+    },
+    {
+      "path": "android-upload/apk.part-0007",
+      "bytes": 524288,
+      "sha256": "b9c0b8a19c821a629c4e98ea9a868b7a5574f55aafd4cbc67d2b7df23f52b9d0"
+    },
+    {
+      "path": "android-upload/apk.part-0008",
+      "bytes": 524288,
+      "sha256": "65d091aa11d836181aae6176e41eaaa7bae1ce42ed7d76b52bfc25264c43760f"
+    },
+    {
+      "path": "android-upload/apk.part-0009",
+      "bytes": 524288,
+      "sha256": "c0b4ddc1c3187356f8453e2747cca3fe3c53f14cd3c4aac4c18aece5d1581e82"
+    },
+    {
+      "path": "android-upload/apk.part-0010",
+      "bytes": 524288,
+      "sha256": "b432261a95df1cc3a86eaf18d76261c9d1da5856a03540f49cba607f2078f8fb"
+    },
+    {
+      "path": "android-upload/apk.part-0011",
+      "bytes": 524288,
+      "sha256": "67cae7b0c60b32c75e8392fe3e419abd6b4dfa932b90867d5b630f02293db252"
+    },
+    {
+      "path": "android-upload/apk.part-0012",
+      "bytes": 524288,
+      "sha256": "3eaf2908ca9c5e3e4bd9ab3260c07102349144643bf5d229cbb9b78320a9c20b"
+    },
+    {
+      "path": "android-upload/apk.part-0013",
+      "bytes": 524288,
+      "sha256": "98584c5b9e6c5333799d1ae64d2d634cfcbebad6f978a7498293e31c8802e158"
+    },
+    {
+      "path": "android-upload/apk.part-0014",
+      "bytes": 524288,
+      "sha256": "17ed278961f1a48f8abc147a21ee4cecedff5049bd0fe3a3b0b2ab1f8c47d741"
+    },
+    {
+      "path": "android-upload/apk.part-0015",
+      "bytes": 524288,
+      "sha256": "f065d7cde6db7414dfebc3756b0dc6c2509e720ebcf7f69457c83eabd6a72d1b"
+    },
+    {
+      "path": "android-upload/apk.part-0016",
+      "bytes": 524288,
+      "sha256": "9ff68421597ee65a7a707b2c6d41794ca48bf0d55cd31f417d48b5d06a1c3917"
+    },
+    {
+      "path": "android-upload/apk.part-0017",
+      "bytes": 524288,
+      "sha256": "7bc88a7844bbaf9406199398cff717408f46fd679ad6b7688b00e8dedf1b8b11"
+    },
+    {
+      "path": "android-upload/apk.part-0018",
+      "bytes": 524288,
+      "sha256": "421133f8845366b463ecf726445ace5b8fb8916d3558b57f1d10c83fd9d7515b"
+    },
+    {
+      "path": "android-upload/apk.part-0019",
+      "bytes": 524288,
+      "sha256": "6e4d6c097e966772b98e2edabea70a5f178ee13c9100b92230bf24bf9f274b08"
+    },
+    {
+      "path": "android-upload/apk.part-0020",
+      "bytes": 524288,
+      "sha256": "44fe1ded24f5a9d28f7aba1e4cf812cbb22a5f24852b29bb5ac9644269ed7cd8"
+    },
+    {
+      "path": "android-upload/apk.part-0021",
+      "bytes": 524288,
+      "sha256": "cc5914b3f7e9cc0ac359812fa8625e3a0582a3936cb382665fc46a78bd87822f"
+    },
+    {
+      "path": "android-upload/apk.part-0022",
+      "bytes": 524288,
+      "sha256": "6a4923a782e84e6ba412e27e19b280545b6066578cb83213db268f1517bcdd10"
+    },
+    {
+      "path": "android-upload/apk.part-0023",
+      "bytes": 524288,
+      "sha256": "2fe133aa452a98c20404b5db8f19a214b6e0fe476bbf83a7901c1fc85d6e67a8"
+    },
+    {
+      "path": "android-upload/apk.part-0024",
+      "bytes": 524288,
+      "sha256": "7a22dfc4bd1ed7b5cc91e70b9f4e03d0f9c6dae09491e108a5194152f56977d4"
+    },
+    {
+      "path": "android-upload/apk.part-0025",
+      "bytes": 524288,
+      "sha256": "65d40b166a64c0aa47078850fd07b68a81eb0326eaca3d64db6d997ca38575b2"
+    },
+    {
+      "path": "android-upload/apk.part-0026",
+      "bytes": 524288,
+      "sha256": "cc39ca18d82e5c3b050cf11f4c61e7c90cdb48daa8011560429117ff12a6a964"
+    },
+    {
+      "path": "android-upload/apk.part-0027",
+      "bytes": 524288,
+      "sha256": "ab5f84b0885bcf9a4d838f8e7585cc75ec1140e5559755578b590b5393512047"
+    },
+    {
+      "path": "android-upload/apk.part-0028",
+      "bytes": 524288,
+      "sha256": "464976d09a04bdd9bead594e84fe18b15e20a05cee49e2a9d0ea66f9514836cd"
+    },
+    {
+      "path": "android-upload/apk.part-0029",
+      "bytes": 524288,
+      "sha256": "a18fd9df51d0d32e8a4e4ca1d715faa8907349d8a51d01729dbac128c5437499"
+    },
+    {
+      "path": "android-upload/apk.part-0030",
+      "bytes": 524288,
+      "sha256": "7563d250ec35a3bab2060e4cda67038924ab788656bb374d0aae268b394cb4f3"
+    },
+    {
+      "path": "android-upload/apk.part-0031",
+      "bytes": 524288,
+      "sha256": "6b05bdb3ef8d1c37ab863bba29518d12f35d3c44a57c54c8cee0dc2c4530a7c7"
+    },
+    {
+      "path": "android-upload/apk.part-0032",
+      "bytes": 524288,
+      "sha256": "84d88700c40c0588a90919574b6f75a2708ea4ad96daf13d079948545e6e6ffe"
+    },
+    {
+      "path": "android-upload/apk.part-0033",
+      "bytes": 524288,
+      "sha256": "d50189c273c614962d49770f670140d375bad7b45a17e2758f5c364c40918a3a"
+    },
+    {
+      "path": "android-upload/apk.part-0034",
+      "bytes": 524288,
+      "sha256": "dedcbf6d995fe7bc7f36341b19bcc1011ce7ee47a1355838b2b5d5a48b162d3c"
+    },
+    {
+      "path": "android-upload/apk.part-0035",
+      "bytes": 524288,
+      "sha256": "7c79f904155943440424290ae00490655272f3046d335ca6ac2215e058d0bbf1"
+    },
+    {
+      "path": "android-upload/apk.part-0036",
+      "bytes": 524288,
+      "sha256": "a75cc93b76ddb30bf1a809115739b6bed20b65fdc06dccbf05c4d8f6789e36f9"
+    },
+    {
+      "path": "android-upload/apk.part-0037",
+      "bytes": 524288,
+      "sha256": "794a5aa6363b1528e984c644f05156892c9f77c8e1d6ee28c39b8ce82c851461"
+    },
+    {
+      "path": "android-upload/apk.part-0038",
+      "bytes": 524288,
+      "sha256": "3098b1da30bec3f26ab43cfa7fab3476fc2058edbbe49fa8b83602b1005bea85"
+    },
+    {
+      "path": "android-upload/apk.part-0039",
+      "bytes": 524288,
+      "sha256": "92c1ef8266561d2a6e1afa7390c3412abc241b900b30b132b28402aa1a17f280"
+    },
+    {
+      "path": "android-upload/apk.part-0040",
+      "bytes": 524288,
+      "sha256": "745e065aa2f6c05ff40a81fd4996c1109444d1aa6cba79c899b55f97405080e1"
+    },
+    {
+      "path": "android-upload/apk.part-0041",
+      "bytes": 524288,
+      "sha256": "293de60328e8c7d8e420fda60f3e504f930997ca393b050746f555b0d570001a"
+    },
+    {
+      "path": "android-upload/apk.part-0042",
+      "bytes": 524288,
+      "sha256": "db541d67fe7af457d3530a2fc79fae4b8643472c06f3135b65b7db61eb5d427d"
+    },
+    {
+      "path": "android-upload/apk.part-0043",
+      "bytes": 524288,
+      "sha256": "9514edc9f55ec6a3f3fc91bae5dac24f16199a58b8a0226d10384f72210cb841"
+    },
+    {
+      "path": "android-upload/apk.part-0044",
+      "bytes": 524288,
+      "sha256": "492d6048290a6e3fc3a51e25355428fa15f57983a3e560681985c4bc677897cf"
+    },
+    {
+      "path": "android-upload/apk.part-0045",
+      "bytes": 524288,
+      "sha256": "6ed625ffb3e3484052457d08419fc9199410d2c2e7a5bff5a0a67ef062dcaf4b"
+    },
+    {
+      "path": "android-upload/apk.part-0046",
+      "bytes": 524288,
+      "sha256": "461a3cd4973357dc1cc89ed49f602b1e0ac3e68ba635d30f80aa72a82a0cfdd7"
+    },
+    {
+      "path": "android-upload/apk.part-0047",
+      "bytes": 524288,
+      "sha256": "05761b5b34259664dc30805db5b5455ec76cf21a9ef3f98a71f4ffb1eb4bfeb6"
+    },
+    {
+      "path": "android-upload/apk.part-0048",
+      "bytes": 524288,
+      "sha256": "be4239e2d8dd260b96e186fb1e8adcee65b99573deb7d5df045b8827c0a14f29"
+    },
+    {
+      "path": "android-upload/apk.part-0049",
+      "bytes": 524288,
+      "sha256": "ad2126e3593245a49b9cb47fe8793bab2c0dc5c0476ec63dd431d8c29db435ad"
+    },
+    {
+      "path": "android-upload/apk.part-0050",
+      "bytes": 524288,
+      "sha256": "284619ec6a6aedeedca077b2337f9fc3732efd36d6ee4aaf1e3f21e92dfb9659"
+    },
+    {
+      "path": "android-upload/apk.part-0051",
+      "bytes": 524288,
+      "sha256": "f68f90f4f4770fa512ac001da5ed11b6f6cc19ecc12712fe92fb767224fb2c21"
+    },
+    {
+      "path": "android-upload/apk.part-0052",
+      "bytes": 524288,
+      "sha256": "ed8628416e59298e9b01da040bb06070facdb3ea153d36c4210e74bd2887735c"
+    },
+    {
+      "path": "android-upload/apk.part-0053",
+      "bytes": 524288,
+      "sha256": "32902387d4534b752b272ab7069a7170a3f324d0f7109fe94e9ec4c43f13336b"
+    },
+    {
+      "path": "android-upload/apk.part-0054",
+      "bytes": 524288,
+      "sha256": "353f146932a4e6af2ce696eb352e66681c50f41f543c408ef9c64df3fee2eb81"
+    },
+    {
+      "path": "android-upload/apk.part-0055",
+      "bytes": 524288,
+      "sha256": "30b9e7e04b0e7eea8cf1a29d606b3ab685f056b7dbdbf72ae5497c701216efba"
+    },
+    {
+      "path": "android-upload/apk.part-0056",
+      "bytes": 524288,
+      "sha256": "4ac4046e8fed49cac853b89be7d0dcb137127344544a8b27dbb5323a200073eb"
+    },
+    {
+      "path": "android-upload/apk.part-0057",
+      "bytes": 524288,
+      "sha256": "b0dd6037ed0b46fc0194ec46a35296c0b65d63c19b4b7dad6adc7d91175a89d8"
+    },
+    {
+      "path": "android-upload/apk.part-0058",
+      "bytes": 524288,
+      "sha256": "3f69ef240e0f308b3803bc3adf90256d4c154b3b995d3438f34e63792e54c7a7"
+    },
+    {
+      "path": "android-upload/apk.part-0059",
+      "bytes": 374550,
+      "sha256": "2becad890356cdea72aecbcf3b7d7bd047aad50eac6b513d12ee150bf23f95fa"
+    }
+  ],
+  "build_manifest_sha256": "ddd8daab463a64964e76c683fe9b2a2d2bab50e1e9030ddb7028a2b273110948"
+}

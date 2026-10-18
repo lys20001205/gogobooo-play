@@ -68,6 +68,54 @@ jobs:
               print(f'Verified {name}: {path.stat().st_size} bytes')
           PY
           (cd _site && sha256sum --strict --check ../SITE.sha256)
+      - name: Assemble verified isolated Android test download
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          """Add verified runtime APK to existing verified Pages output, preserving old bytes."""
+          from pathlib import Path, PurePosixPath
+          import hashlib,json,re
+          meta=json.loads(Path('ANDROID_EXPORT.json').read_text())
+          assert set(meta)=={'schema','filename','bytes','sha256','chunks','build_manifest_sha256'}
+          assert meta['schema']=='gogobooo-isolated-android-export-v1'
+          assert meta['filename']=='gogobooo-gi-test.apk'
+          assert type(meta['bytes']) is int and 0<meta['bytes']<=128*1024*1024
+          for key in ['sha256','build_manifest_sha256']:assert re.fullmatch(r'[0-9a-f]{64}',meta[key])
+          assert isinstance(meta['chunks'],list) and 0<len(meta['chunks'])<=512
+          names=set();total=0
+          for i,chunk in enumerate(meta['chunks']):
+              assert set(chunk)=={'path','bytes','sha256'}
+              assert chunk['path']==f'android-upload/apk.part-{i:04d}'
+              assert type(chunk['bytes']) is int and 0<chunk['bytes']<=1024*1024
+              assert re.fullmatch(r'[0-9a-f]{64}',chunk['sha256'])
+              names.add(chunk['path']);total+=chunk['bytes']
+          assert total==meta['bytes']
+          source=Path('android-upload');assert source.is_dir() and not source.is_symlink()
+          assert {p.as_posix() for p in source.rglob('*') if p.is_file()}==names
+          assert all(not p.is_symlink() and p.is_file() for p in source.iterdir())
+          manifest=Path('android-build-manifest.json');assert not manifest.is_symlink()
+          build=manifest.read_bytes();assert hashlib.sha256(build).hexdigest()==meta['build_manifest_sha256']
+          assert isinstance(json.loads(build),dict)
+          target=Path('_site/gi-android');target.mkdir(exist_ok=False)
+          output=target/meta['filename'];hasher=hashlib.sha256()
+          with output.open('xb') as out:
+              for chunk in meta['chunks']:
+                  data=Path(chunk['path']).read_bytes()
+                  assert len(data)==chunk['bytes'] and hashlib.sha256(data).hexdigest()==chunk['sha256']
+                  hasher.update(data);out.write(data)
+          assert output.stat().st_size==meta['bytes'] and hasher.hexdigest()==meta['sha256']
+          assert output.read_bytes()[:4]==b'PK\x03\x04'
+          (target/'build-manifest.json').write_bytes(build)
+          (target/'SHA256SUMS.txt').write_text(meta['sha256']+'  '+meta['filename']+'\n')
+          original={}
+          for line in Path('SITE.sha256').read_text().splitlines():
+              digest,name=line.split('  ',1);original[name]=digest
+          for name,digest in original.items():assert hashlib.sha256((Path('_site')/name).read_bytes()).hexdigest()==digest,name
+          new={'gi-android/'+n for n in [meta['filename'],'build-manifest.json','SHA256SUMS.txt']}
+          assert {p.relative_to('_site').as_posix() for p in Path('_site').rglob('*') if p.is_file()}==set(original)|new
+          print(f'Verified Android APK: {meta["bytes"]} bytes, SHA256 {meta["sha256"]}; original game unchanged')
+          PY
       - name: Upload verified site
         uses: actions/upload-pages-artifact@v4
         with:
